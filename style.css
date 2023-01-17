@@ -1,0 +1,258 @@
+:root{
+    --azul: #0A3871;
+    --gris: #D8DFE8;
+    --blanco: #FFFFFF;
+    --fondo: #b2bfcf00;
+    --fuente: inter;
+
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    min-height:100%
+
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body{
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(var(--gris), var(--azul));
+}
+
+main{
+    display: flex;
+
+}
+
+.logo{
+    margin-top: 3rem;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.zona-encriptacion{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+#ingreso_texto{
+    font-size: 3rem;
+    line-height: 150%;
+    margin: 10% 0;
+    width: 70%;
+    border-style: none;
+    background: var(--fondo);
+    resize: none;
+}
+
+
+#ingreso_texto::placeholder{
+    color: var(--azul);
+    font-family: 'Inter', sans-serif;
+}
+
+#ingreso_texto:focus{
+    outline: none; /*Elimina el contorno*/
+}
+
+.botones{
+    margin-bottom: 9%;
+}
+
+.recomendacion{
+    display: flex;
+    align-items: flex-start;
+}
+.recomendacion p{
+    font-size: 1.2rem;
+    line-height: 150%;
+    margin-left: 1rem;
+    margin-bottom: 1.6rem;
+    font-weight: 700;
+
+
+}
+
+
+.encriptar{
+    width: 40%;
+    padding: 2.5rem;
+    margin-right:1rem;
+    font-size: 1.6rem;
+    color: var(--blanco);
+    background: var(--azul);
+    border-radius: 2rem;
+    cursor: pointer;
+
+}
+
+.desencriptar{
+    width: 40%;
+    padding: 2.5rem;
+    margin-left:1rem;
+    font-size: 1.6rem;
+    color: var(--azul);
+    background: var(--gris);
+    border-color: var(--azul);
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.rectangulo{
+    width: 25%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: var(--blanco);
+    margin: 3.5rem 5rem 3.5rem 0;
+    border-radius: 3rem;
+}
+
+#texto_modificado{
+    text-align: center;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    border: none;
+    resize: none;
+    visibility: hidden;
+}
+
+#texto_modificado:focus{
+    outline: none;
+}
+
+.rectangulo_contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.muneco{
+    width: 85%;
+}
+
+.primertexto{
+    text-align: center;;
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 2.88rem;
+    margin-top: 2rem;
+}
+
+.segundotexto{
+    text-align: center;;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin: .5rem 0;
+}
+
+#copiar{
+    width: 100%;
+    padding: 2.5rem;
+    font-size: 1.6rem;
+    color: var(--azul);
+    background: var(--blanco);
+    border-color: var(--azul);
+    border-radius: 2rem;
+    cursor: pointer;
+    visibility: hidden;
+
+}
+
+@media screen and (max-width:480px) {
+    main{
+        flex-direction: column;
+    }
+
+    .logo{
+        width: 25%;
+        margin-bottom: 2rem;
+    }
+
+    .zona-encriptacion{
+        width: 100%;
+        margin-left: 2rem;
+    }
+
+    .botones{
+        margin: 0;
+    }
+
+    #ingreso_texto{
+        width: 85%;
+        margin: 2rem;
+        height: 30rem;
+    }
+
+    .encriptar, .desencriptar{
+        width: 95%;
+        margin: 1rem 0;
+        
+    }
+
+    .rectangulo{
+        width: 95%;
+        margin: 2rem 2rem;
+
+    }
+
+    .muneco{
+        width: 0;
+        visibility: hidden;
+    }
+}
+
+
+
+
+@media screen and (min-width:480px) and (max-width:820px) {
+
+    main{
+        flex-direction: column;
+    }
+
+    .logo{
+        width: 15%;
+    }
+
+    .zona-encriptacion{
+        width: 100%;
+        margin-left: 5rem;
+    }
+
+    #ingreso_texto{
+        margin: 5% 0;
+        font-size: 3.5rem;
+        width: 80%;
+    }
+
+    .recomendacion p{
+        font-size: 1.3rem;
+    }
+
+    .encriptar, .desencriptar{
+        width: 45%;
+        font-size: 1.8rem;
+    }
+
+    .rectangulo{
+        width: 95%;
+        margin: 4% 6%;
+
+    }
+
+    .muneco{
+        width: 0;
+        visibility: hidden;
+    }
+}
